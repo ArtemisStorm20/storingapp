@@ -2,8 +2,20 @@
 
 //Variabelen vullen
 $attractie = $_POST['attractie'];
+if (empty($attractie))
+{
+    $error[] = "Vul de attractie naam in.";
+}
 $type = $_POST['type'];
+if (empty($type))
+{
+    $error[] = "Vul het type in.";
+}
 $capaciteit = $_POST['capaciteit'];
+if (!is_numeric($capaciteit))
+{
+    $error[] = "Capaciteit moet een getal zijn.";
+}
 if(isset($_POST['prioriteit']))
 {
     $prioriteit = 1;
@@ -13,8 +25,18 @@ else
     $prioriteit = 0;
 }
 $melder = $_POST['melder'];
+if (empty($melder))
+{
+    $error[] = "Vul de naam van de melder in.";
+}
 $overig = $_POST['overig'];
 
+//Controleer of er geen fouten zijn
+if(isset($errors))
+{
+    var_dump($error);
+    die();
+}
 
 //1. Verbinding
 require_once '../../../config/conn.php';
@@ -34,4 +56,4 @@ $statement->execute([
 ]);
 
 //Ga terug naar index
-header("location:../meldingen/index.php?msgMelding opgeslagen");
+//header("location:../meldingen/index.php?msgMelding opgeslagen");
