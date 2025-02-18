@@ -41,12 +41,12 @@
             </tr>
             <?php foreach ($meldingen as $melding): ?>
             <tr>
-                <th><h1><?php echo $melding['attractie'] ?></h1></th>
-                <th><h1><?php echo $melding['type'] ?></h1></th>
-                <th><h1><?php echo $melding['capaciteit'] ?></h1></th>
-                <th><h1><?php echo $melding['prioriteit'] ?></h1></th>
-                <th><h1><?php echo $melding['melder'] ?></h1></th>
-                <th><h1><?php echo $melding['overige_info'] ?></h1></th>
+                <td><?php echo $melding['attractie'] ?></td>
+                <td><?php echo $melding['type'] ?></td>
+                <td><?php echo $melding['capaciteit'] ?></td>
+                <td><?php echo $melding['prioriteit'] ?></td>
+                <td><?php echo $melding['melder'] ?></td>
+                <td><?php echo $melding['overige_info'] ?></td>
             </tr>
         <?php endforeach; ?>
         </table>
