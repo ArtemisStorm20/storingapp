@@ -28,6 +28,8 @@
             $statement = $conn->prepare($query);
 
             $statement->execute();
+
+            $meldingen = $statement->fetchAll(PDO::FETCH_ASSOC);
         ?>
     </div>
 
