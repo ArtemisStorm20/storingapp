@@ -22,6 +22,8 @@
 
         <?php
             require_once '../../../config/conn.php';
+
+            $query = "SELECT * FROM meldingen";
         ?>
     </div>
 
