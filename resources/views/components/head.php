@@ -6,3 +6,4 @@
 <link rel="icon" href="<?php echo $base_url; ?>/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="<?php echo $base_url; ?>/public_html/css/normalize.css">
 <link rel="stylesheet" href="<?php echo $base_url; ?>/public_html/css/main.css">
+<link rel="stylesheet" href="<?php echo $base_url; ?>/public_html/css/login.css">
