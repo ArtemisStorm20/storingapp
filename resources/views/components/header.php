@@ -1,4 +1,11 @@
-<?php require_once __DIR__.'/../../../config/config.php'; ?>
+<?php 
+session_start();
+if (isset($_SESSION['user_id']))
+{
+    $msg = "Je moet eerst inloggen!";
+    exit;
+}
+require_once __DIR__.'/../../../config/config.php'; ?>
 
 <header>
     <div class="container">
@@ -8,7 +15,7 @@
             <a href="<?php echo $base_url; ?>/resources/views/meldingen/index.php">Meldingen</a>
         </nav>
         <div>
-            <a href="#" style="color: lightgrey;">Inloggen</a>
+            <a href="<?php echo $base_url; ?>/login.php">Inloggen</a>
         </div>
     </div>
 </header>

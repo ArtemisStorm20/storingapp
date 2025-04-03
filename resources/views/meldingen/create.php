@@ -15,7 +15,7 @@
         <h1>Nieuwe melding</h1>
 
         <form action="<?php echo $base_url; ?>/app/Http/Controllers/meldingenController.php" method="POST">
-
+            <input type="hidden"  name="action" value="create">
             <div class="form-group">
                 <label for="attractie">Naam attractie:</label>
                 <input type="text" name="attractie" id="attractie" class="form-input">
@@ -35,8 +35,8 @@
                 <input type="number" min="0" name="capaciteit" id="capaciteit" class="form-input">
             </div>
             <div class="form-group">
-                <label for ="prio" class="form-label">Prio:</label>
-                <input type="checkbox" id="prioCheckbox" name="prio"> Melding met prioriteit
+            <label for ="prioriteit" class="form-label">prioriteit:</label>
+                <input type="checkbox"  name="prioriteit" id="prioriteit" class="form-input"
             </div>
             <div class="form-group">
                 <label for="melder">Naam melder:</label>

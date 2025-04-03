@@ -36,8 +36,11 @@
             <tr>
                <th>Attractie</th>
                <th>Type</th>
+               <th>Capaciteit</th>
+               <th>Prioriteit</th>
                <th>Melder</th>
                <th>Overige info</th> 
+               <th>Aanpassen</th>
             </tr>
             <?php foreach ($meldingen as $melding): ?>
             <tr>
@@ -47,6 +50,7 @@
                 <td><?php echo $melding['prioriteit'] ?></td>
                 <td><?php echo $melding['melder'] ?></td>
                 <td><?php echo $melding['overige_info'] ?></td>
+                <td><a href='edit.php?id=<?php echo $melding['id'];?>'>Aanpassen</a></td>
             </tr>
         <?php endforeach; ?>
         </table>
